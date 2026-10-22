@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 
 export default function Contact({ onShowToast }) {
   const formRef = useRef(null);
+  const submissionLockRef = useRef(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,6 +22,9 @@ export default function Contact({ onShowToast }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (submissionLockRef.current) return;
+
+    submissionLockRef.current = true;
     setIsSubmitting(true);
     setSubmitError('');
     setFormSubmitted(false);
@@ -100,6 +104,7 @@ export default function Contact({ onShowToast }) {
         onShowToast('Could not send message.');
       }
     } finally {
+      submissionLockRef.current = false;
       setIsSubmitting(false);
     }
   };

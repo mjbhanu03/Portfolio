@@ -38,12 +38,12 @@ export const portfolioData = {
       duration: "6 months",
       featured: true,
       website: "https://www.hyperlinkinfosystem.com/",
-      summary: "Worked as a Full Stack Developer Fresher across React.js, Express.js, and MySQL delivering resilient enterprise modules.",
+      summary: "Worked as a Full Stack Developer Trainee across React.js, Express.js, and MySQL.",
       bullets: [
-        "Worked as a Full Stack Developer Fresher across React.js, Express.js and MySQL.",
-        "Developed React.js applications using Hooks, Formik, Yup and Axios for form handling, validation and API integration.",
-        "Built and maintained REST APIs with Node.js, Express.js and MySQL following MVC architecture, with JWT authentication and authorization.",
-        "Worked with middleware, Multer, Swagger API documentation and Postman for testing and debugging."
+        "Trained as a full stack developer with React.js, Express.js and MySQL, building projects on this stack.",
+        "Built React.js applications using Hooks, Formik, Yup and Axios for form handling, validation and API integration.",
+        "Developed REST APIs with Node.js, Express.js and MySQL using MVC architecture, with JWT authentication and authorization.",
+        "Used middleware, Multer, Swagger and Postman for file uploads, API documentation."
       ],
       skills: ["React.js", "Node.js", "Express.js", "MySQL", "JWT Auth", "Multer", "Swagger", "Formik", "Yup", "Axios", "Postman"]
     },

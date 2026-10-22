@@ -32,18 +32,19 @@ export default function App() {
 
   // Toggle Dark / Light Theme
   const toggleTheme = () => {
+    showToast(
+      `Switched to ${theme === "dark" ? "Light Mode ☀️" : "Dark Mode 🌙" }`,
+    );
     setTheme((prev) => {
       const next = prev === "dark" ? "light" : "dark";
-      showToast(
-        `Switched to ${next === "dark" ? "Dark Mode 🌙" : "Light Mode ☀️"}`,
-      );
+      console.log("Check here")
       return next;
     });
   };
 
   // Toast System
   const showToast = (message) => {
-    const id = Date.now();
+    const id = Date.now() + Math.random() * 1000;
     setToasts((prev) => [...prev, { id, message }]);
     setTimeout(() => {
       setToasts((prev) => prev.filter((t) => t.id !== id));
